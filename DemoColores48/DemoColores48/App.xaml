@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoColores48.App"
+             xmlns:Diccionarios="clr-namespace:DemoColores48.Diccionarios">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <Diccionarios:DiccionarioColores />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+        <Style x:Key="EstiloFondoPagina"
+               TargetType="Page">
+            <Setter Property="BackgroundColor" Value="{
+                AppThemeBinding 
+                Dark={StaticResource ColorFondoDark},
+                Default={StaticResource ColorFondoLight},
+                Light={StaticResource ColorFondoLight}}"></Setter>
+        </Style>
+
+        <Style x:Key="EstiloFrame"
+               TargetType="Frame">
+            <Setter Property="CornerRadius">10</Setter>
+        </Style>
+
+    </Application.Resources>
+</Application>
